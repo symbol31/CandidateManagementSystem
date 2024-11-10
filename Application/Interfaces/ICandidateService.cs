@@ -1,12 +1,10 @@
 ﻿using Domain.Entities;
 
-namespace Domain.Interfaces
+namespace Application.Interfaces
 {
-    namespace CandidateManagement.Core.Interfaces
+
+    public interface ICandidateService
     {
-        public interface ICandidateService
-        {
-            Task UpsertCandidateAsync(Candidate candidate);
-        }
+        Task UpsertCandidateAsync(Candidate candidate);
     }
 }

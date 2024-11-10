@@ -1,5 +1,5 @@
-﻿using Domain.Entities;
-using Domain.Interfaces.CandidateManagement.Core.Interfaces;
+﻿using Application.Interfaces;
+using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Dtos;
