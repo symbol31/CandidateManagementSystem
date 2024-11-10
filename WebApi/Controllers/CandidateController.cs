@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.CandidateManagement.Core.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Dtos;
 
@@ -16,6 +17,7 @@ namespace WebApi.Controllers
             _candidateService = candidateService;
         }
 
+        [Authorize(Roles = "Admin,User")]
         [HttpPost]
         public async Task<IActionResult> AddOrUpdateCandidate([FromBody] UpsertCandidateDto dto)
         {
