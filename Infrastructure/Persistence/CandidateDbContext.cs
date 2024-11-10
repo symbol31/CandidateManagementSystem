@@ -5,8 +5,8 @@ namespace Infrastructure.Persistence
 {
     public class CandidateDbContext : DbContext
     {
-        public DbSet<Candidate> Candidates { get; set; }
         public CandidateDbContext(DbContextOptions<CandidateDbContext> options) : base(options) { }
+        public DbSet<Candidate> Candidates { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
